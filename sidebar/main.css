@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body {
+  background: #525252;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.button-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index: 1;
+}
+
+.button.turn {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.button {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #ff7979;
+  position: relative;
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear, -webkit-transform .5s linear;
+}
+
+.button button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  border: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button button:focus {
+  outline: none;
+}
+
+button#open {
+  left: 60%;
+}
+
+button#close {
+  top: 60%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.body {
+  width: 60vw;
+  max-width: 1000px;
+  background: #fff;
+  padding: 50px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+}
+
+.body h1, .body p {
+  margin-bottom: 20px;
+}
+
+.body .image {
+  width: 100%;
+}
+
+.body .image img {
+  width: 100%;
+}
+
+.body.rotate {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.body.rotate + .links li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.links {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+.links li {
+  padding: 5px;
+  margin: 4px 0;
+  list-style: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.links li i {
+  margin-right: 10px;
+}
+
+.links li a {
+  display: inline-block;
+  color: yellow;
+  text-decoration: none;
+}
+
+.links ul li + li {
+  margin-left: 15px;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+.links ul li + li + li {
+  margin-left: 30px;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+/*# sourceMappingURL=main.css.map */
